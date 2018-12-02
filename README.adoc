@@ -15,12 +15,12 @@ Community add-ons are tested and supported by the community.
 [[introduction-addons]]
 == Introduction
 
-link:https://docs.openshift.org/latest/minishift/using/addons.html[Minishift add-ons] are extensions, or plug-ins, that customize the default OpenShift cluster configuration and behavior.
+link:https://docs.okd.io/latest/minishift/using/addons.html[Minishift add-ons] are extensions, or plug-ins, that customize the default OpenShift cluster configuration and behavior.
 For example, you can use the link:https://github.com/minishift/minishift/tree/master/addons/anyuid[anyuid] add-on to allow authenticated users to run images without a pre-allocated UID, or the link:https://github.com/minishift/minishift/tree/master/addons/registry-route[registry-route] add-on to expose the OpenShift registry as a route.
 
-Minishift includes several link:https://docs.openshift.org/latest/minishift/using/addons.html#default-addons[default add-ons], which are installed automatically when you first start Minishift.
+Minishift includes several link:https://docs.okd.io/latest/minishift/using/addons.html#default-addons[default add-ons], which are installed automatically when you first start Minishift.
 These add-ons are tested and supported by the Minishift core team.
-You can also write your own link:https://docs.openshift.org/latest/minishift/using/addons.html#custom-addons[custom add-ons] that use any of the link:https://docs.openshift.org/latest/minishift/using/addons.html#addon-commands[supported add-on commands].
+You can also write your own link:https://docs.okd.io/latest/minishift/using/addons.html#custom-addons[custom add-ons] that use any of the link:https://docs.okd.io/latest/minishift/using/addons.html#addon-commands[supported add-on commands].
 
 [[share-addons-with-community]]
 == Share your add-ons with the community
@@ -55,10 +55,10 @@ $ minishift addons apply <addon-name>
 - To enable the add-on to start each time that Minishift starts, run the following command:
 +
 ----
-$ minishift addons --enable <addon-name>
+$ minishift addons enable <addon-name>
 ----
 
-For more information about enabling, disabling, and applying add-ons, see the link:https://docs.openshift.org/latest/minishift/using/addons.html[Add-ons] topic in the Minishift documentation.
+For more information about enabling, disabling, and applying add-ons, see the link:https://docs.okd.io/latest/minishift/using/addons.html[Add-ons] topic in the Minishift documentation.
 
 [[ci-setup]]
 == CI Setup
@@ -66,8 +66,8 @@ For more information about enabling, disabling, and applying add-ons, see the li
 `minishift-addons` uses link:https://ci.centos.org/[CentOS CI] as CI build server.
 A link:https://ci.centos.org/job/minishift-addons-pr/[pull request build job] will be triggered for every pull request.
 However, the build job runs the integration tests only when the pull request contains any change related to add-on.
-Also, a link:https://ci.centos.org/job/minishift-addons-nightly-b2d/[nightly job] runs daily at midnight.
-It execute all available add-on link:https://github.com/minishift/minishift-addons/tree/master/test/integration/features[integration tests] against the _master_ branch of the `minishift-addons` GitHub repository with link:https://github.com/minishift/minishift-b2d-iso[b2d ISO].
+Also, a link:https://ci.centos.org/job/minishift-addons-nightly-centos/[nightly job] runs daily at midnight.
+It execute all available add-on link:https://github.com/minishift/minishift-addons/tree/master/test/integration/features[integration tests] against the _master_ branch of the `minishift-addons` GitHub repository with link:https://github.com/minishift/minishift-centos-iso[CentOS ISO].
 
 [[contact-community]]
 == Contact the Minishift community
