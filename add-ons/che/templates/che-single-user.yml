@@ -147,7 +147,7 @@ objects:
       openshift-username: ""
       openshift-password: ""
       openshift-project: "${PROJECT_NAME}"
-      pvc-strategy: "unique"
+      pvc-strategy: "common"
       openshift-trust-certs: "false"
       github-client-id: "${GITHUB_CLIENT_ID}"
       github-client-secret: "${GITHUB_CLIENT_SECRET}"
@@ -506,5 +506,3 @@ objects:
       to:
         kind: Service
         name: che-host
-
-
